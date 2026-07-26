@@ -1,3 +1,4 @@
+import facade.Facade;
 import singleton.SingletonApressado;
 import singleton.SingletonLazyHolder;
 import singleton.SingletonPreguicoso;
@@ -23,6 +24,7 @@ public class Main {
         System.out.println(lazyHolder);
         lazyHolder = SingletonLazyHolder.getInstancia();
         System.out.println(lazyHolder);
+        System.out.println();
 
         //strategy
         Comportamento normal = new ComportamentoNormal();
@@ -38,5 +40,11 @@ public class Main {
 
         robo.setStrategy(agressivo);
         robo.mover();
+        System.out.println();
+
+        //Facade
+
+        Facade facade = new Facade();
+        facade.migarCliente("Venilton", "18750-00");
         }
     }
